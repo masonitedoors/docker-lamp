@@ -59,7 +59,15 @@ fi
 /usr/sbin/postfix start
 
 # Run MariaDB
-/usr/bin/mysqld_safe --timezone=${DATE_TIMEZONE}&
+/usr/bin/mysqld_safe --skip-grant-tables --timezone=${DATE_TIMEZONE}&
+
+# Set MariaDB/MySQL defaults
+mysql < /root/mysql_defaults.sql
+
+service mysql stop
+service mysql start
+
+rm /root/mysql_defaults.sql
 
 # Run Apache:
 if [ $LOG_LEVEL == 'debug' ]; then

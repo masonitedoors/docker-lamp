@@ -79,11 +79,13 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 
 COPY index.php /var/www/html/
 COPY run-lamp.sh /usr/sbin/
+COPY mysql_defaults.sql /root/
 
 RUN a2enmod rewrite
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN chmod +x /usr/sbin/run-lamp.sh
 RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 775 /var/www/html
 
 VOLUME /var/www/html
 VOLUME /var/log/httpd
