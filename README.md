@@ -11,12 +11,12 @@ This Docker container implements a last generation LAMP stack with a set of popu
 
 Includes the following components:
 
- * Ubuntu 18.04 LTS Bionic Beaver base image.
+ * Ubuntu 16.04 LTS Bionic Beaver base image.
  * Apache HTTP Server 2.4
  * MariaDB 10.0
  * Postfix 2.11
  * SNMP
- * PHP 7.2
+ * PHP 7.0
  * PHP modules
  	* php-bz2
 	* php-cgi
