@@ -7,11 +7,11 @@ masonitedoors/lamp
 [![Docker Build Status](https://img.shields.io/docker/build/masonitedoors/lamp.svg?style=plastic)](https://hub.docker.com/r/masonitedoors/lamp/builds/)
 [![](https://images.microbadger.com/badges/image/masonitedoors/lamp.svg)](https://microbadger.com/images/masonitedoors/lamp "masonitedoors/lamp")
 
-This Docker container implements a last generation LAMP stack with a set of popular PHP modules. Includes support for [Composer](https://getcomposer.org/), [Bower](http://bower.io/) and [npm](https://www.npmjs.com/) package managers and a Postfix service to allow sending emails through PHP [mail()](http://php.net/manual/en/function.mail.php) function.
+This Docker container implements a Ubuntu 16.04 / PHP 7.0 LAMP stack with a set of popular PHP modules. Includes support for [Composer](https://getcomposer.org/), [npm](https://www.npmjs.com/) package managers and a Postfix service to allow sending emails through PHP [mail()](http://php.net/manual/en/function.mail.php) function.
 
 Includes the following components:
 
- * Ubuntu 16.04 LTS Bionic Beaver base image.
+ * Ubuntu 16.04 LTS Xenial Xerus base image.
  * Apache HTTP Server 2.4
  * MariaDB 10.0
  * Postfix 2.11
@@ -63,8 +63,7 @@ Includes the following components:
 	* htop
 	* unzip
 	* php-cli
-
-Open ports via UFW: 80,443,3306,9000,22,25,143,993,110,995
+	* wp-cli
 
 Installation from [Docker registry hub](https://registry.hub.docker.com/u/masonitedoors/lamp/).
 ----
@@ -161,5 +160,12 @@ Use cases
 
 ```
 	docker exec -i -t my-lamp-container bash
-	mysql -u root
+	mysql -u root -p <default>
 ```
+
+Default Users
+----
+SSH: root | root
+SSH: web | web
+MySQL: root | root
+MySQL: web | web
