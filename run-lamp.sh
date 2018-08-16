@@ -32,15 +32,27 @@ fi
 if [ ! $LOG_STDOUT ]; then
 cat << EOB
 
-    **********************************************
-    *                                            *
-    *    Docker image: masonitedoors/lamp               *
-    *    https://github.com/masonitedoors/docker-lamp   *
-    *                                            *
-    **********************************************
+    ▓▓▓.                       .▓▓▓
+    ▓▓▓▓▓.                   .▓▓▓▓▓
+    ▓▓▓▓▓▓▓.               .▓▓▓▓▓▓▓
+    ▓▓▓▓'▓▓▓▓.           .▓▓▓▓'▓▓▓▓
+    ▓▓▓▓ '▓▓▓▓▓.       .▓▓▓▓▓' ▓▓▓▓
+    ▓▓▓▓   '▓▓▓▓▓.   .▓▓▓▓▓'   ▓▓▓▓
+    ▓▓▓▓     '▓▓▓▓▓.  '▓▓▓'    ▓▓▓▓
+    ▓▓▓▓     . '▓▓▓▓▓.  '      ▓▓▓▓
+    ▓▓▓▓     ▓.  '▓▓▓▓▓.       ▓▓▓▓
+    ▓▓▓▓     ▓▓▓.  '▓▓▓▓▓.     ▓▓▓▓
+    ▓▓▓▓     ▓▓▓▓    '▓▓▓▓     ▓▓▓▓
+    ▓▓▓▓     ▓▓▓▓     ▓▓▓▓     ▓▓▓▓
+    ▓▓▓▓     ▓▓▓▓     ▓▓▓▓     ▓▓▓▓
+    ▓▓▓▓     ▓▓▓▓     ▓▓▓▓     ▓▓▓▓
+    ▓▓▓▓     ▓▓▓▓     ▓▓▓▓     ▓▓▓▓
+
+    Docker image: masonitedoors/lamp
+    https://github.com/masonitedoors/docker-lamp
 
     SERVER SETTINGS
-    ---------------
+    -------------------------------
     · Redirect Apache access_log to STDOUT [LOG_STDOUT]: No.
     · Redirect Apache error_log to STDERR [LOG_STDERR]: $LOG_STDERR
     · Log Level [LOG_LEVEL]: $LOG_LEVEL
