@@ -52,7 +52,7 @@ RUN apt-get install -y \
 RUN apt-get install apache2 libapache2-mod-php7.0 -y
 RUN apt-get install mariadb-common mariadb-server mariadb-client -y
 RUN apt-get install postfix -y
-RUN apt-get install git nodejs npm htop composer nano tree vim curl ftp php-cli ufw -y
+RUN apt-get install git nodejs npm htop composer nano tree curl php-cli -y
 RUN pecl channel-update pecl.php.net
 RUN apt-get install snmp && \
 			pecl install xdebug && \

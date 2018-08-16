@@ -54,11 +54,8 @@ Includes the following components:
 	* git
 	* composer
 	* npm / nodejs
-	* bower
-	* vim
 	* tree
 	* nano
-	* ftp
 	* curl
 	* htop
 	* unzip
