@@ -58,18 +58,9 @@ fi
 # Run Postfix
 /usr/sbin/postfix start
 
-if [ ! -f /root/mysql_defaults.sql ]; then
-    # Run MariaDB (to set root pw)
-    /usr/bin/mysqld_safe --skip-grant-tables
-
-    # Set MariaDB/MySQL defaults
-    mysql < /root/mysql_defaults.sql
-
-    service mysql stop
-    rm /root/mysql_defaults.sql
-fi
-
 # Run MariaDB
+service mysql start
+mysql < /root/mysql_defaults.sql
 service mysql restart
 
 # Run Apache:
@@ -78,5 +69,3 @@ if [ $LOG_LEVEL == 'debug' ]; then
 else
     &>/dev/null /usr/sbin/apachectl -DFOREGROUND -k start
 fi
-
-echo "DONE"
