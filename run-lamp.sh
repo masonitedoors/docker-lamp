@@ -64,13 +64,13 @@ else
     /bin/ln -sf /dev/stdout /var/log/apache2/access.log
 fi
 
-# Set PHP timezone
+# Set PHP timezone:
 /bin/sed -i "s/\;date\.timezone\ \=/date\.timezone\ \=\ ${DATE_TIMEZONE}/" /etc/php/7.0/apache2/php.ini
 
-# Run Postfix
+# Run Postfix:
 /usr/sbin/postfix start
 
-# Run MariaDB
+# Run MariaDB:
 service mysql start
 mysql < /root/mysql_defaults.sql
 service mysql restart
