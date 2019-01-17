@@ -1,7 +1,4 @@
-masonitedoors/lamp
-==========
-
-![docker_logo](https://raw.githubusercontent.com/masonitedoors/docker-lamp/master/docker_139x115.png)![docker_masonitedoors_logo](https://raw.githubusercontent.com/masonitedoors/docker-lamp/master/docker_masonitedoors_161x115.png)
+# masonitedoors/lamp
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/masonitedoors/lamp.svg?style=plastic)](https://hub.docker.com/r/masonitedoors/lamp/)
 [![Docker Build Status](https://img.shields.io/docker/build/masonitedoors/lamp.svg?style=plastic)](https://hub.docker.com/r/masonitedoors/lamp/builds/)
